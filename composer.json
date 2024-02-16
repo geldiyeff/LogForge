@@ -1,0 +1,19 @@
+{
+    "name": "geldiyeff/logforge",
+    "description": "A simple PHP logging library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Geldiyeff\\Logforge\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dovletmammet Geldiyev",
+            "email": "imdvlt39@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
