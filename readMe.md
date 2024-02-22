@@ -17,7 +17,7 @@ composer require geldiyeff/logforge
 require "vendor/autoload.php";
 
 // Import the LogForge class
-use Geldiyeff\LogForge\LogForge;
+use Geldiyeff\Logforge\LogForge;
 
 // Specify the directory where log files will be stored
 $logDirectory = "logs";
