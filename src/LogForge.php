@@ -3,7 +3,7 @@
 /**
  * LogForge - A simple PHP logging library.
  * @author Dovletmammet Geldiyev
- * @version 1.0.0
+ * @version 1.0.1
  * @license MIT
  */
 
@@ -31,7 +31,7 @@ class LogForge
     private $errorLogFilePath;
 
     /**
-     * Constructor method for the LogCraftX class.
+     * Constructor method for the LogForge class.
      *
      * @param string $logDirectory Directory where log files will be stored.
      */
@@ -44,7 +44,7 @@ class LogForge
             mkdir($this->logDirectory, 0777, true);
         }
 
-        $this->errorLogFilePath = $this->logDirectory . '/error_log.txt';
+        $this->errorLogFilePath = $this->logDirectory . '/error_log.log';
     }
 
     /**
@@ -60,7 +60,7 @@ class LogForge
             throw new InvalidArgumentException("Invalid log level: $level");
         }
 
-        $logFilePath = $this->logDirectory . '/' . $level . '_log.txt';
+        $logFilePath = $this->logDirectory . '/' . $level . '_log.log';
         $formattedMessage = $this->formatLogMessage($level, $message);
 
         // Check log file size and rotate if necessary.
@@ -112,7 +112,7 @@ class LogForge
         $filteredLogs = [];
 
         foreach ($this->logLevels as $logLevel) {
-            $logFilePath = $this->logDirectory . '/' . $logLevel . '_log.txt';
+            $logFilePath = $this->logDirectory . '/' . $logLevel . '_log.log';
 
             if (file_exists($logFilePath)) {
                 $logs = file($logFilePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);

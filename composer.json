@@ -3,6 +3,12 @@
     "description": "A simple PHP logging library",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "log",
+        "logging",
+        "logforge"
+    ],
+    "version": "1.0.1",
     "autoload": {
         "psr-4": {
             "Geldiyeff\\Logforge\\": "src/"
@@ -14,6 +20,8 @@
             "email": "imdvlt39@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.3.0"
+    }
 }
